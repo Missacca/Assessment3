@@ -44,3 +44,31 @@ The following packages were 已更新:
   com.unity.collab-proxy 从版本 1.13.5 到 2.0.0
   com.unity.timeline 从版本 1.6.2 到 1.6.4
   com.unity.visualscripting 从版本 1.7.6 到 1.8.0
+
+=== Sat Apr  6 01:32:11 2024
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were 已更新:
+  com.unity.cinemachine 从版本 2.3.4 到 2.8.9
+  com.unity.collab-proxy 从版本 1.2.16 到 2.0.0
+  com.unity.ext.nunit 从版本 1.0.0 到 1.0.6
+  com.unity.ide.rider 从版本 1.1.0 到 3.0.18
+  com.unity.ide.vscode 从版本 1.1.2 到 1.2.5
+  com.unity.postprocessing 从版本 2.1.7 到 3.2.2
+  com.unity.test-framework 从版本 1.0.13 到 1.1.31
+  com.unity.textmeshpro 从版本 2.0.1 到 3.0.6
+  com.unity.timeline 从版本 1.1.0 到 1.6.4
+The following packages were 已移除:
+  com.unity.package-manager-ui@2.2.0
+
+=== Sat Apr  6 01:32:11 2024
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were 已添加:
+  com.unity.cinemachine@2.8.9
+  com.unity.ext.nunit@1.0.6
+  com.unity.postprocessing@3.2.2
