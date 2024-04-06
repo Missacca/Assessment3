@@ -36,6 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\LiYunlin\Script\GunController.cs" />
+     <Compile Include="Assets\LiYunlin\Script\Gun.cs" />
+     <Compile Include="Assets\LiYunlin\Script\PlayerControl.cs" />
      <Compile Include="Assets\LiYunlin\Script\Player.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
