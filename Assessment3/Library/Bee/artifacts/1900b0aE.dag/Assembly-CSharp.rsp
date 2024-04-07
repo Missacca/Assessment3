@@ -354,8 +354,12 @@
 "Assets/LiYunlin/Script/followPlayer.cs"
 "Assets/LiYunlin/Script/Gun.cs"
 "Assets/LiYunlin/Script/GunController.cs"
+"Assets/LiYunlin/Script/Heart.cs"
+"Assets/LiYunlin/Script/Heartf.cs"
 "Assets/LiYunlin/Script/Player.cs"
 "Assets/LiYunlin/Script/PlayerControl.cs"
+"Assets/LiYunlin/Script/Scores.cs"
+"Assets/LiYunlin/Script/shoot.cs"
 "Assets/LiYunlin/Script/Zombie.cs"
 "Assets/UnityStore/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs"
 -langversion:9.0

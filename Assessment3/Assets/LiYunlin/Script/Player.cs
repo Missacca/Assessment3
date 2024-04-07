@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     PlayerControl controller;
     void Start()
     {
+       
         controller= GetComponent<PlayerControl>();
         plane = new Plane(Vector3.up, Vector3.zero);
         gun = GetComponent<GunController>();
