@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     private GunController gun;
     PlayerControl controller;
     private int health = 3; 
-     public GameObject gameOverPanel;
+    public GameObject gameOverPanel;
+   
     void Start()
     {
        
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
         {
             gameOverPanel.SetActive(false);
         }
+       
     }
    
     void Update()
@@ -69,5 +71,4 @@ public class Player : MonoBehaviour
             gameOverPanel.SetActive(true);
         }
     }
-    
 }

@@ -10,4 +10,9 @@ public class blood : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
+    public void NextGame()
+    { 
+        SceneManager.LoadScene(" ");
+         Time.timeScale = 1;
+    }
 }

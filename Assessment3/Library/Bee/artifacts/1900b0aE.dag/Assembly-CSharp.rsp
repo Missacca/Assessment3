@@ -360,6 +360,7 @@
 "Assets/LiYunlin/Script/PlayerControl.cs"
 "Assets/LiYunlin/Script/Scores.cs"
 "Assets/LiYunlin/Script/UIcontrol.cs"
+"Assets/LiYunlin/Script/Win.cs"
 "Assets/LiYunlin/Script/Zombie.cs"
 "Assets/UnityStore/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs"
 -langversion:9.0
