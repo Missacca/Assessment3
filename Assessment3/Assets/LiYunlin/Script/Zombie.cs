@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 public class Zombie : MonoBehaviour
 { 
     public int maxHealth = 3; 
@@ -11,12 +12,16 @@ public class Zombie : MonoBehaviour
     public float speed = 3.0f;
     private Rigidbody rb;
     private Scores scores;
-     public float knockbackForce = 3f;
+    public float knockbackForce = 3f;
+    public UnityEngine.UI.Image Bar;
+    private RectTransform imageRectTransform;
+    private float healtha,maxHealtha=100;
     
      void Start()
     {
          rb = GetComponent<Rigidbody>();
          scores = FindObjectOfType<Scores>();
+         imageRectTransform = Bar.GetComponent<RectTransform>();
     }
 
     void Update()
@@ -25,6 +30,9 @@ public class Zombie : MonoBehaviour
         {
             MoveTowardsTarget();
         }
+        BarFill();
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+        imageRectTransform.position = screenPos;
     }
     public void TakeDamage(int damageAmount)
     {
@@ -34,6 +42,7 @@ public class Zombie : MonoBehaviour
             rb.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse); // 施加向后退的力
         
         this.currentHealth -= damageAmount;
+
 
         if (this.currentHealth <= 0) 
         {
@@ -64,4 +73,8 @@ public class Zombie : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
         transform.LookAt(target.position);
     } 
+    private void BarFill(){
+        Bar.fillAmount=Mathf.Lerp(Bar.fillAmount,(float)currentHealth / maxHealth,speed*Time.deltaTime) ;
+    }
+    
 }

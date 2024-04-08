@@ -10,12 +10,18 @@ public class Player : MonoBehaviour
     private Plane plane;
     private GunController gun;
     PlayerControl controller;
+    private int health = 3; 
+     public GameObject gameOverPanel;
     void Start()
     {
        
         controller= GetComponent<PlayerControl>();
         plane = new Plane(Vector3.up, Vector3.zero);
         gun = GetComponent<GunController>();
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
+        }
     }
    
     void Update()
@@ -37,4 +43,31 @@ public class Player : MonoBehaviour
             gun.Shoot();
         }
     }
+     private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // 当玩家与敌人发生碰撞时，玩家受到伤害
+            TakeDamage(1);
+        }
+    }
+     private void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount; // 减去伤害值
+
+        if (health <= 0)
+        {
+            gameOver(); 
+        }
+    }
+
+    private void gameOver()
+    {
+         Time.timeScale = 0;
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+    }
+    
 }
