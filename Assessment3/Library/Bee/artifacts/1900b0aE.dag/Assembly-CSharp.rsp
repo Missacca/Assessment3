@@ -368,11 +368,9 @@
 "Assets/LiYunlin/Script/Win.cs"
 "Assets/LiYunlin/Script/Zombie.cs"
 "Assets/UnityStore/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs"
-"Assets/UnityStore/SciFi Warehouse Kit/Demo/Scripts/LightFlicker.cs"
-"Assets/UnityStore/SciFi Warehouse Kit/Demo/Scripts/MouseComponent.cs"
-"Assets/UnityStore/SciFi Warehouse Kit/Demo/Scripts/PlayerMovement.cs"
-"Assets/UnityStore/SciFi Warehouse Kit/Demo/Scripts/PlayRandomSound.cs"
-"Assets/UnityStore/SciFi Warehouse Kit/Demo/Scripts/PushPhysics.cs"
+"Assets/Yekun/Script/MouseComponent.cs"
+"Assets/Yekun/Script/PlayerMovement.cs"
+"Assets/Yekun/Script/PushPhysics.cs"
 -langversion:9.0
 
 /deterministic
