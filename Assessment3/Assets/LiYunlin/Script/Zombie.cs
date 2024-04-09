@@ -15,6 +15,7 @@ public class Zombie : MonoBehaviour
     public float knockbackForce = 3f;
     public UnityEngine.UI.Image Bar;
     private RectTransform imageRectTransform;
+    private Animator animator;
     private float healtha,maxHealtha=100;
     
      void Start()
@@ -22,6 +23,7 @@ public class Zombie : MonoBehaviour
          rb = GetComponent<Rigidbody>();
          scores = FindObjectOfType<Scores>();
          imageRectTransform = Bar.GetComponent<RectTransform>();
+          animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -53,11 +55,15 @@ public class Zombie : MonoBehaviour
     void Die()
     {
         isDead = true; 
-        Destroy(gameObject);
+        animator.SetTrigger("Dead");
+        Invoke("Kill",speed/2);
           if (scores != null)
         {
             scores.AddScore(1); 
         }
+    }
+    void Kill(){
+        Destroy(gameObject);
     }
 
     public void OnTriggerEnter(Collider other)

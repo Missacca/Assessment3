@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\LiYunlin\Script\UIcontrol.cs" />
+     <Compile Include="Assets\LiYunlin\Script\MiniMap.cs" />
+     <Compile Include="Assets\LiYunlin\Script\Win.cs" />
      <Compile Include="Assets\LiYunlin\Script\blood.cs" />
      <Compile Include="Assets\LiYunlin\Script\Gameover.cs" />
      <Compile Include="Assets\LiYunlin\Script\Zombie.cs" />
@@ -47,7 +49,8 @@
      <Compile Include="Assets\UnityStore\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
      <Compile Include="Assets\LiYunlin\Script\Scores.cs" />
      <Compile Include="Assets\LiYunlin\Script\Player.cs" />
-     <Compile Include="Assets\LiYunlin\Script\Win.cs" />
+     <Compile Include="Assets\Delet.cs" />
+     <Compile Include="Assets\LiYunlin\Script\aimUI.cs" />
      <None Include="Assets\LiYunlin\UnityResource\Zombie\Materials\Standard_Two_Sided .shader" />
      <None Include="Assets\LiYunlin\Textures\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\LiYunlin\Textures\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
