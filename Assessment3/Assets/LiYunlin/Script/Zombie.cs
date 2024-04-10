@@ -17,6 +17,8 @@ public class Zombie : MonoBehaviour
     private RectTransform imageRectTransform;
     private Animator animator;
     public AudioSource attatch;
+
+    public AudioSource raw;
     
      void Start()
     {
@@ -35,6 +37,7 @@ public class Zombie : MonoBehaviour
         BarFill();
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         imageRectTransform.position = screenPos;
+        if(Time.timeScale != 0){raw.Play(); }
     }
     public void TakeDamage(int damageAmount)
     {

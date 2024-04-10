@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Yekun/Scene/Find spaceship.unity
+- path: Assets/LiYunlin/Assets/Game.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

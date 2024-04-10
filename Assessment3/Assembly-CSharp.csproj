@@ -37,20 +37,21 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\LiYunlin\Script\UIcontrol.cs" />
-     <Compile Include="Assets\LiYunlin\Script\MiniMap.cs" />
-     <Compile Include="Assets\LiYunlin\Script\Win.cs" />
      <Compile Include="Assets\LiYunlin\Script\blood.cs" />
-     <Compile Include="Assets\LiYunlin\Script\Gameover.cs" />
+     <Compile Include="Assets\LiYunlin\Script\aimUI.cs" />
      <Compile Include="Assets\LiYunlin\Script\Zombie.cs" />
      <Compile Include="Assets\LiYunlin\Script\followPlayer.cs" />
      <Compile Include="Assets\LiYunlin\Script\GunController.cs" />
+     <Compile Include="Assets\Yekun\Script\PlayerMovement.cs" />
      <Compile Include="Assets\LiYunlin\Script\Gun.cs" />
      <Compile Include="Assets\LiYunlin\Script\PlayerControl.cs" />
      <Compile Include="Assets\UnityStore\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
      <Compile Include="Assets\LiYunlin\Script\Scores.cs" />
+     <Compile Include="Assets\Yekun\Script\MouseComponent.cs" />
      <Compile Include="Assets\LiYunlin\Script\Player.cs" />
+     <Compile Include="Assets\Yekun\Script\PushPhysics.cs" />
      <Compile Include="Assets\Delet.cs" />
-     <Compile Include="Assets\LiYunlin\Script\aimUI.cs" />
+     <Compile Include="Assets\LiYunlin\Script\MusicManager.cs" />
      <None Include="Assets\LiYunlin\UnityResource\Zombie\Materials\Standard_Two_Sided .shader" />
      <None Include="Assets\LiYunlin\Textures\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\LiYunlin\Textures\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -761,6 +762,10 @@
       <Project>{3df272bf-af65-8372-26f5-47b34d4bdd42}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ProGrids.Editor.csproj">
+      <Project>{cce5a3b3-4f9d-327a-06e3-143a54432706}</Project>
+      <Name>Unity.ProGrids.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{582c3265-528c-ac4d-2912-043eb717f5e2}</Project>
       <Name>UnityEngine.UI</Name>
@@ -792,6 +797,10 @@
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{eae6ebf0-9491-cf21-fe81-a4878071a1f7}</Project>
       <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProGrids.csproj">
+      <Project>{86d34d1c-d96b-da1a-c0d5-7d8cd701038a}</Project>
+      <Name>Unity.ProGrids</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
       <Project>{da3af040-1785-f2bc-43aa-18e33563f1b8}</Project>

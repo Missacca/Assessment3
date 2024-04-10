@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public GameObject gameOverPanel;
      public AudioSource shootinga;
       public AudioSource walkinga;
+    public AudioSource lose;
+    public AudioSource decrease;  
    
     void Start()
     {
@@ -53,7 +55,7 @@ public class Player : MonoBehaviour
             controller.LookAt(ray.GetPoint(f));
         }
         //shoot
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButton(0)&&Time.timeScale!=0){
             gun.Shoot();
             if(Time.timeScale != 0){shootinga.Play(); }
         }
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
         {
             // 当玩家与敌人发生碰撞时，玩家受到伤害
             TakeDamage(1);
+            decrease.Play();
         }
     }
      private void TakeDamage(int damageAmount)
@@ -71,8 +74,9 @@ public class Player : MonoBehaviour
         health -= damageAmount; // 减去伤害值
 
         if (health <= 0)
-        {
+        {lose.Play();
             gameOver(); 
+            
         }
     }
 
