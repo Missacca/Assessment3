@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour
     {
         rig.MovePosition(transform.position+velocity*Time.fixedDeltaTime);
     }
-    public void Move(Vector3 velocity)=>this.velocity=velocity;
+    public void Move(Vector3 velocity){this.velocity=velocity;}
     public void LookAt(Vector3 p){
         Vector3 vector3=new (p.x,transform.position.y,p.z);
         transform.LookAt(vector3);

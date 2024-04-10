@@ -9,6 +9,7 @@ public class Scores : MonoBehaviour
     public int score=0;
     public GameObject NextPanel;
     public int other=7;
+    public AudioSource wina;
     void Start(){
         SetCountText();
          if (NextPanel != null)
@@ -22,6 +23,7 @@ public class Scores : MonoBehaviour
         other=7-score;
         Debug.Log("Score: " + score); 
         SetCountText();
+        Invoke("gameWin",2f);
     }
      public void SetCountText()
     {
@@ -31,7 +33,8 @@ public class Scores : MonoBehaviour
     public void gameWin()
     {
         if(score==7){
-
+            wina.Play();
+             gameOver();
         }
     }
     private void gameOver()

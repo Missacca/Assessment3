@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class UIcontrol : MonoBehaviour
 {
-      public AnimationCurve showCurve;
+    public AnimationCurve showCurve;
     public AnimationCurve hideCurve;
     public float ani;
     public GameObject panel;
     private bool panelVisible = false;
+    public AudioSource app;
 
     void Update()
     {
@@ -18,7 +19,7 @@ public class UIcontrol : MonoBehaviour
         {
             StartCoroutine(ShowPanel(panel));
             panelVisible = true;
-            
+            app.Play();
         }
         // 隐藏面板的条件判断改为按下 ESC 键并且面板当前可见
         else if (Input.GetKeyDown(KeyCode.Escape) && panelVisible)
@@ -26,6 +27,7 @@ public class UIcontrol : MonoBehaviour
             StartCoroutine(HidePanel(panel));
             panelVisible = false;
              Time.timeScale = 1;
+             app.Play();
         }
     }
 

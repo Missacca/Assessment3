@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     PlayerControl controller;
     private int health = 3; 
     public GameObject gameOverPanel;
+     public AudioSource shootinga;
+      public AudioSource walkinga;
    
     void Start()
     {
@@ -32,17 +34,28 @@ public class Player : MonoBehaviour
         inputMove=new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
         moveVelocity=moveSpeed*inputMove;
         controller.Move(moveVelocity);
+         if (inputMove != Vector3.zero)
+        {
+            if (!walkinga.isPlaying)
+            {
+                walkinga.Play();
+            }
+        }
+        else
+        {
+            walkinga.Stop();
+        }
        //follow the mouse
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         float f;
         if(plane.Raycast(ray,out f))
         {
-            Debug.DrawLine(ray.origin, ray.GetPoint(f),Color.red);
             controller.LookAt(ray.GetPoint(f));
         }
         //shoot
         if(Input.GetMouseButton(0)){
             gun.Shoot();
+            if(Time.timeScale != 0){shootinga.Play(); }
         }
     }
      private void OnCollisionEnter(Collision collision)

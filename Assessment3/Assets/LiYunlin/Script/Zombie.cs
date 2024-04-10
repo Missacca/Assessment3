@@ -16,7 +16,7 @@ public class Zombie : MonoBehaviour
     public UnityEngine.UI.Image Bar;
     private RectTransform imageRectTransform;
     private Animator animator;
-    private float healtha,maxHealtha=100;
+    public AudioSource attatch;
     
      void Start()
     {
@@ -70,6 +70,7 @@ public class Zombie : MonoBehaviour
     {
         if (other.gameObject.CompareTag("bullet")) 
         {
+            attatch.Play();
             TakeDamage(1); // 收到伤害
         }
     }
