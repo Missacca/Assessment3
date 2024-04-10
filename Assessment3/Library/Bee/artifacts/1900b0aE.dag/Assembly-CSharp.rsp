@@ -359,6 +359,7 @@
 "Assets/LiYunlin/Script/followPlayer.cs"
 "Assets/LiYunlin/Script/Gun.cs"
 "Assets/LiYunlin/Script/GunController.cs"
+"Assets/LiYunlin/Script/HelpMenu.cs"
 "Assets/LiYunlin/Script/MusicManager.cs"
 "Assets/LiYunlin/Script/Player.cs"
 "Assets/LiYunlin/Script/PlayerControl.cs"
