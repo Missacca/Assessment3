@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 motion = transform.right * x + transform.forward * z;
         controller.Move(motion * speed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
