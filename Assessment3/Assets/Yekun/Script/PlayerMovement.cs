@@ -15,15 +15,20 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
-    
+    public AudioSource backgroundAudio;
      public AudioClip footStepSound;
      public float footStepDelay;
  
      private float nextFootstep = 0;
-
+    void Start()
+    {
+        backgroundAudio.Play();
+    }
+ 
     // Update is called once per frame
     void Update()
     {
+       
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y <0)
@@ -50,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
              nextFootstep -= Time.deltaTime;
              if (nextFootstep <= 0) 
                 {
-                 GetComponent<AudioSource>().PlayOneShot(footStepSound, 0.7f);
+                 GetComponent<AudioSource>().PlayOneShot(footStepSound, 1.5f);
                  nextFootstep += footStepDelay;
                 }
              }
