@@ -70,6 +70,6 @@ public class Sceneintro : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(1.2f);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game2");
     }
 }
