@@ -45,7 +45,7 @@ public class Escape : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && isEdown)
         {
             Debug.Log("R key pressed!");
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("IntroKun1");
         }
     }
 

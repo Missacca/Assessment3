@@ -17,6 +17,7 @@ public class Sceneintro : MonoBehaviour
     public float waitBeforeFadeOut = 1.2f;
     public GameObject panel;
     public GameObject a;
+    public AudioSource b;
     private void Start()
     {
         StartCoroutine(TypeText());
@@ -27,10 +28,12 @@ public class Sceneintro : MonoBehaviour
     {
         // 等待一秒钟
         yield return new WaitForSeconds(1f);
+         b.Play();
 
         // 逐字打印文字
         foreach (char letter in ha)
         {
+           
             textMeshPro.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
