@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: Assets/Menu/Menu.unity
     guid: eb5547897265df349bdd2ef38093efd9
   - enabled: 1
+    path: Assets/WeiZihan/Scene/IntroWei.unity
+    guid: 98a9c66e73b37df459a7f23ef89eb57f
+  - enabled: 1
+    path: Assets/WeiZihan/Scene/ZihanScene.unity
+    guid: fc3f7cc267ab9e2449fb5170127dfe32
+  - enabled: 1
     path: Assets/LiYunlin/Assets/IntroLi.unity
     guid: c087d98d5c530bd4cbf8fc2850a5a2f0
   - enabled: 1
     path: Assets/LiYunlin/Assets/Game.unity
     guid: 764fef8b279b50a4387a59a4f537aff3
-  - enabled: 1
-    path: Assets/LiYunlin/Assets/Game2.unity
-    guid: 3463d545985741c479934ae32ff3140a
   - enabled: 1
     path: Assets/Yekun/Scene/KunScene.unity
     guid: 6128dedb397e91345bfa59d79f7df075
