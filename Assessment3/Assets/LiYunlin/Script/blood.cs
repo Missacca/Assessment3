@@ -14,6 +14,7 @@ public class blood : MonoBehaviour
     public void NextGame()
     { 
          Time.timeScale = 1;
+        SceneManager.LoadScene("IntroKun");
     }
     public void MenuTo()
     {
