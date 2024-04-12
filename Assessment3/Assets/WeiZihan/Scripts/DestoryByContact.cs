@@ -8,10 +8,19 @@ public class DestoryByContact : MonoBehaviour
     public GameObject playerExp;
     public GameObject bulletImpact;
     public int health;
+    public GameObject gameControllerObj;
+    private GameController gc;
 
-
+    private void Start()
+    {
+        gameControllerObj = GameObject.FindGameObjectWithTag("GameController");
+        gc = gameControllerObj.GetComponent<GameController>();
+    }
     private void OnTriggerEnter(Collider other)
     {
+
+
+
         if (other.gameObject.CompareTag("Boundary"))
             return;
         if (other.gameObject.CompareTag("bullet"))
@@ -21,7 +30,7 @@ public class DestoryByContact : MonoBehaviour
         {
             Destroy(this.gameObject);
             Instantiate(asteroidExp, this.transform.position, Quaternion.identity);
-
+            gc.addScore(10);
         }
 
 
@@ -30,6 +39,7 @@ public class DestoryByContact : MonoBehaviour
             Instantiate(playerExp, other.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             Instantiate(asteroidExp, this.transform.position, Quaternion.identity);
+            gc.gameover();
         }
 
 

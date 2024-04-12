@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -10,11 +12,20 @@ public class GameController : MonoBehaviour
     public float spawnInterval;
     public float startTime;
     public float roundInterval;
+
+    private int score;
+    public TextMeshProUGUI counterText;
+
+    bool gameoverFlag;
+    public GameObject panel;
+
+
     // X max = 50     X min = -50
     // Z = 65
     // Start is called before the first frame update
     void Start()
     {
+        counterText.text = "Score: 0";
         StartCoroutine(spawnWaves());
     }
     IEnumerator spawnWaves()
@@ -30,8 +41,24 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(spawnInterval);
             }
             yield return new WaitForSeconds(roundInterval);
-        }
-        
 
+            if (gameoverFlag)
+            {
+                panel.SetActive(true);
+            }
+        }
+    }
+    public void gameover()
+    {
+        gameoverFlag = true;
+    }
+    public void addScore(int num)
+    {
+        score += num;
+        updateCounter();
+    }
+    void updateCounter() 
+    {
+        counterText.text = "Score: " + score;
     }
 }
