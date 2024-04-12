@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    Rigidbody rb;
 
-    private void OnEnable()
+    public GameObject bullet;
+    public GameObject shotSpawn;
+    public float speed;
+    private void Start()
     {
-         
+        rb = GetComponent<Rigidbody>();
+        rb.velocity = transform.forward * speed;
+        StartCoroutine(EnemyFire());
     }
 
+    IEnumerator EnemyFire()
+    {
+        while (gameObject.activeSelf)
+        {
+            yield return new WaitForSeconds(0.5f);
+            Instantiate(bullet, shotSpawn.transform.position, Quaternion.identity);
+        }
+    }
 
 }

@@ -12,7 +12,6 @@ public class SceneChange : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        //      SceneManager.LoadScene(sceneName);
         StartCoroutine("PlayMySound", sceneName); // call the method
     }
 

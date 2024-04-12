@@ -83,6 +83,7 @@ MonoBehaviour:
   playerExp: {fileID: 100002, guid: f24cbed0158693a4682f498275a87787, type: 3}
   bulletImpact: {fileID: 100014, guid: 5cd42577bfec7d9479a3b374c61c5b5a, type: 3}
   health: 5
+  gameControllerObj: {fileID: 0}
 --- !u!114 &2051648134
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -811,7 +811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &909544893
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1132,8 +1132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 4015864496185632193, guid: a53c9c32be2cd4d4a835837893483b20, type: 3}
+  enemy: {fileID: 1840962451719095701, guid: 7ea3f5db5d619f2449923cde6c28c755, type: 3}
   spawnValues: {x: 50, y: 0, z: 65}
-  asteroidNumber: 10
+  asteroidNumber: 4
+  enemyNumber: 1
   spawnInterval: 0.5
   startTime: 0.5
   roundInterval: 0.5

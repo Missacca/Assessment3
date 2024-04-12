@@ -399,6 +399,7 @@
 "Assets/WeiZihan/Scripts/DestoryByBoundary.cs"
 "Assets/WeiZihan/Scripts/DestoryByContact.cs"
 "Assets/WeiZihan/Scripts/DestoryByTime.cs"
+"Assets/WeiZihan/Scripts/EnemyBullet.cs"
 "Assets/WeiZihan/Scripts/EnemyController.cs"
 "Assets/WeiZihan/Scripts/GameController.cs"
 "Assets/WeiZihan/Scripts/PlayerController.cs"

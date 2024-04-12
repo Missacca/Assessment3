@@ -7,8 +7,10 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     public GameObject asteroid;
+    public GameObject enemy;
     public Vector3 spawnValues;
     public int asteroidNumber;
+    public int enemyNumber;
     public float spawnInterval;
     public float startTime;
     public float roundInterval;
@@ -37,7 +39,13 @@ public class GameController : MonoBehaviour
             {
                 Vector3 position = new Vector3(Random.Range(-spawnValues.x, spawnValues.x),spawnValues.y, spawnValues.z);
                 Instantiate(asteroid, position, Quaternion.identity);
-
+                
+                yield return new WaitForSeconds(spawnInterval);
+            }
+            for(int i=0; i< enemyNumber; i++)
+            {
+                Vector3 position = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                Instantiate(enemy, position, Quaternion.Euler(0,180,0));
                 yield return new WaitForSeconds(spawnInterval);
             }
             yield return new WaitForSeconds(roundInterval);

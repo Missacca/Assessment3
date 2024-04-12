@@ -23,6 +23,8 @@ public class DestoryByContact : MonoBehaviour
 
         if (other.gameObject.CompareTag("Boundary"))
             return;
+        if (other.gameObject.CompareTag("enemyBullet"))
+            return;
         if (other.gameObject.CompareTag("bullet"))
             Instantiate(bulletImpact, other.transform.position, Quaternion.identity);
         health--;
