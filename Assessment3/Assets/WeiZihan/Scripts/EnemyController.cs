@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour
     {
         while (gameObject.activeSelf)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             Instantiate(bullet, shotSpawn.transform.position, Quaternion.identity);
         }
     }
