@@ -409,6 +409,8 @@
 "Assets/WeiZihan/Scripts/SceneChange.cs"
 "Assets/WeiZihan/Scripts/SceneintroController.cs"
 "Assets/Yekun/Script/BookGuide.cs"
+"Assets/Yekun/Script/Endstory.cs"
+"Assets/Yekun/Script/Endstory1.cs"
 "Assets/Yekun/Script/Escape.cs"
 "Assets/Yekun/Script/Help.cs"
 "Assets/Yekun/Script/KeyFind.cs"
