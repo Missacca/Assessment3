@@ -50,6 +50,10 @@ public class GameController : MonoBehaviour
             }
             yield return new WaitForSeconds(roundInterval);
 
+            if(score > 150)
+            {
+                gameover();
+            }
             if (gameoverFlag)
             {
                 panel.SetActive(true);

@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 public class Sceneintro : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;
-    public string ha="Finally, you managed to evade the attack and reach the solar system. But your ship is running low on fuel, and you are forced to land on the moon, where the Earth Guard has established a space base. After you put on your portable oxygen and land on the lunar surface, your lunar guard team has been turned into zombies by aliens and is roaming the lunar surface. And you find that the number of zombies is far beyond your imagination, and their attack power is also very powerful. You must use your weapons to fight zombies to the death, protect the moon base, and save the Earth!!!";
+    public string ha;
     public float typingSpeed = 0.05f;
     public float waitAfterTyping = 1.2f;
     public float fadeSpeed = 0.5f;
@@ -70,6 +70,6 @@ public class Sceneintro : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(1.2f);
-        SceneManager.LoadScene("Game2");
+        SceneManager.LoadScene("Game");
     }
 }

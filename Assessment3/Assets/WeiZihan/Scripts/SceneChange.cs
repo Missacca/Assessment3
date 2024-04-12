@@ -12,7 +12,7 @@ public class SceneChange : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        StartCoroutine("PlayMySound", sceneName); // call the method
+        StartCoroutine(nameof(PlaySound), sceneName); // call the method
     }
 
     IEnumerator PlaySound(string sceneName)
