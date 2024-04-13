@@ -17,8 +17,6 @@ public class Zombie : MonoBehaviour
     private RectTransform imageRectTransform;
     private Animator animator;
     public AudioSource attatch;
-
-    public AudioSource raw;
     
      void Start()
     {
@@ -50,7 +48,6 @@ public class Zombie : MonoBehaviour
 
         if (this.currentHealth <= 0) 
         {
-            raw.Play();
             Die();
         }
     }

@@ -19,7 +19,9 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI counterText;
 
     bool gameoverFlag;
-    public GameObject panel;
+    bool victoryFlag;
+    public GameObject gameoverPanel;
+    public GameObject victoryPanel;
 
 
     // X max = 50     X min = -50
@@ -52,17 +54,27 @@ public class GameController : MonoBehaviour
 
             if(score > 150)
             {
-                gameover();
+                victory();
             }
             if (gameoverFlag)
             {
-                panel.SetActive(true);
+                Time.timeScale = 0f;
+                gameoverPanel.SetActive(true);
+            }
+            if (victoryFlag)
+            {
+                Time.timeScale = 0f;
+                victoryPanel.SetActive(true);
             }
         }
     }
     public void gameover()
     {
         gameoverFlag = true;
+    }
+    public void victory()
+    {
+        victoryFlag = true;
     }
     public void addScore(int num)
     {

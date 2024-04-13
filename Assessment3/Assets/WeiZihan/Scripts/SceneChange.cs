@@ -17,6 +17,7 @@ public class SceneChange : MonoBehaviour
 
     IEnumerator PlaySound(string sceneName)
     {
+        Time.timeScale = 1f;
         yield return new WaitForSeconds(2); // Wait for seconds
         SceneManager.LoadScene(sceneName); // Change the scene
     }

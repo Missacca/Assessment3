@@ -334,6 +334,7 @@ MonoBehaviour:
   bulletImpact: {fileID: 100014, guid: 5cd42577bfec7d9479a3b374c61c5b5a, type: 3}
   health: 1
   gameControllerObj: {fileID: 0}
+  addScore: 20
 --- !u!1 &2405099320415036678
 GameObject:
   m_ObjectHideFlags: 0

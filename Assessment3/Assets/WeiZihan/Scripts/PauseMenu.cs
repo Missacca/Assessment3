@@ -24,21 +24,15 @@ public class PauseMenu : MonoBehaviour
 
     void PauseGame()
     {
-        // 显示暂停面板
         pausePanel.SetActive(true);
-        // 暂停游戏时间
         Time.timeScale = 0f;
-        // 设置暂停状态
         isPaused = true;
     }
 
     void ResumeGame()
     {
-        // 隐藏暂停面板
         pausePanel.SetActive(false);
-        // 恢复游戏时间
         Time.timeScale = 1f;
-        // 取消暂停状态
         isPaused = false;
     }
 }

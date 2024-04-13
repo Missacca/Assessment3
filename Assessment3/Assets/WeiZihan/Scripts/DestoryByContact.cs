@@ -10,6 +10,7 @@ public class DestoryByContact : MonoBehaviour
     public int health;
     public GameObject gameControllerObj;
     private GameController gc;
+    public int addScore;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class DestoryByContact : MonoBehaviour
         {
             Destroy(this.gameObject);
             Instantiate(asteroidExp, this.transform.position, Quaternion.identity);
-            gc.addScore(10);
+            gc.addScore(addScore);
         }
 
 
