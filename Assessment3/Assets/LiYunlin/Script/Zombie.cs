@@ -37,7 +37,6 @@ public class Zombie : MonoBehaviour
         BarFill();
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         imageRectTransform.position = screenPos;
-        if(Time.timeScale != 0){raw.Play(); }
     }
     public void TakeDamage(int damageAmount)
     {
@@ -51,6 +50,7 @@ public class Zombie : MonoBehaviour
 
         if (this.currentHealth <= 0) 
         {
+            raw.Play();
             Die();
         }
     }

@@ -19,6 +19,8 @@ public class Endstory1 : MonoBehaviour
     private void Start()
     {
         StartCoroutine(TypeText());
+        UnityEngine.Cursor.visible = true;
+        UnityEngine.Cursor.lockState = 0;
         
     }
 
